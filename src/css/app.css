@@ -33,8 +33,16 @@
   }
   .hero .hero-cta {
     @apply w-12 h-12;
-    transform: translateX(-75px) translateY(-50px);
+    transform: translateX(-75px) translateY(-50%);
     background-size: 37.5%;
+  }
+
+  .card .card-shadow {
+    @apply transition duration-300 shadow-none h-full;
+  }
+
+  .card:hover .card-shadow {
+    @apply shadow-lg;
   }
 }
 
@@ -47,4 +55,22 @@
     @apply w-20 h-20 -translate-x-1/2 -translate-y-1/2;
     background-size: auto;
   }
+}
+
+@layer utilities {
+  .stretched-link {
+    @apply absolute inset-0 z-10 cursor-pointer;
+  }
+  .grid {
+    grid-auto-flow: dense;
+    grid-auto-rows: minmax(180px, auto);
+  }
+}
+
+a.card svg g circle.dot {
+  @apply hidden;
+}
+
+a.card.cart-filled svg g circle.dot {
+  @apply block;
 }
