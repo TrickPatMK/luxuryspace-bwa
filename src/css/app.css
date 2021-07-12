@@ -70,7 +70,7 @@
   }
 
   .slider .thumbnail {
-    @apply w-screen order-last-mx-2 overflow-auto flex pl-4;
+    @apply w-screen order-last mx-2 overflow-auto flex pl-4;
   }
 
   .slider .thumbnail .item {
@@ -128,10 +128,14 @@
   }
 }
 
-a.card svg g circle.dot {
+a.cart svg g circle.dot {
   @apply hidden;
 }
 
-a.card.cart-filled svg g circle.dot {
+a.cart.cart-filled svg g circle.dot {
   @apply block;
+}
+
+button[disabled] {
+  @apply bg-gray-300 hover:bg-gray-300 text-gray-400 hover:text-gray-400 cursor-not-allowed;
 }

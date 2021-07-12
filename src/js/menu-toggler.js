@@ -6,8 +6,9 @@ menuTogglerId.addEventListener("click", function () {
   if (menuId.className.indexOf("opacity-0") > -1) {
     addClass(menuTogglerId, "fixed top-0 right-0");
     removeClass(menuTogglerId, "relative");
-    addClass(menuId, "opacity-100 z-30");
     removeClass(menuId, "opacity-0 invisible");
+    addClass(menuId, "opacity-100 z-30");
+    console.log(menuId.classList);
   } else {
     removeClass(menuTogglerId, "fixed top-0 right-0");
     addClass(menuTogglerId, "relative");
